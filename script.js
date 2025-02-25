@@ -44,4 +44,9 @@ rectLight.lookAt(0, 0, 0);
 
 scene.add(lightTop, lightBack, rectLight);
 
-//LIGHT SCENE2
+
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Navbar from "./Navbar";
+import Home from "./Home";
+import BookTicket from "./BookTicket";
+

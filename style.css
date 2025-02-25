@@ -2,7 +2,6 @@ html {
   background: black;
   scroll-behavior: smooth;
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -14,6 +13,11 @@ body {
 ::-webkit-scrollbar {
   width: 0;
   background: transparent;
+}
+#thread{
+  width: 1000px;
+  height: 600px;
+  margin-left: 130px;   
 }
 
 a {
@@ -428,5 +432,92 @@ section {
   background-position: 0;
   animation: moveGradient 6s alternate infinite;
 }
+@media (max-width: 600px) {
+  /* Hide Big Navigation */
+  .navBig {
+    display: none;
+  }
 
+  
+  .navSmall {
+    display: block;
+  }
 
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  .subMenu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    background: #303E50;
+    padding: 10px;
+    border-radius: 5px;
+    width: 150px;
+  }
+
+  .subMenu a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .subMenu a:hover {
+    background: #f4a261;
+  }
+
+  /* Show Menu on Click */
+  .hamburger.active + .subMenu {
+    display: block;
+  }
+
+  /* Responsive Section */
+  section {
+    padding: 80px 20px;
+  }
+
+  .sec1Tit {
+    font-size: 24px;
+  }
+
+  .sec1Name {
+    font-size: 36px;
+  }
+
+  .sec1Des {
+    font-size: 18px;
+  }
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  padding: 3vh 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    to top,
+    rgb(78, 249, 192) 70%,
+    rgb(69, 231, 180) 20%,
+    rgba(229, 46, 22, 0)
+  );
+  box-sizing: border-box;
+}
+.footer-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.footer-right {
+  display: flex;
+  gap: 20px;
+}
